@@ -33,18 +33,28 @@ Hardware – PCs, Cyclone II , USB flasher
 
 **Program:**
 
-/* Program to implement the given logic function and to verify its operations in quartus using Verilog programming. 
+module upcounter(clk,rst,count);
+input clk,rst;
+output reg[3:0]count;
+always@(posedge clk or negedge rst)
+begin
+if(!rst)
+count <= 4'b0000;
+else
+count <= count+1;
+end
+endmodule
 
-Developed by: RegisterNumber:*/
+Developed by:samyuktha s
+RegisterNumber:25017544
 
-
-**RTL realization**
 
 **Output:**
-
-**RTL**
+<img width="1920" height="1080" alt="Screenshot (132)" src="https://github.com/user-attachments/assets/4c9cac0e-a4be-483a-93cd-3edb4f02fcbb" />
 
 **Timing Diagram**
+<img width="1920" height="1080" alt="Screenshot (131)" src="https://github.com/user-attachments/assets/ac371a61-c7b1-43e7-bac6-1d0b32b08147" />
+
 
 **Result:**
 
