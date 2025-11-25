@@ -1,5 +1,3 @@
-# BOOLEAN_FUNCTION_MINIMIZATION
-
 **AIM:**
 
 To implement the given logic function verify its operation in Quartus using Verilog programming.
@@ -32,28 +30,46 @@ Hardware – PCs, Cyclone II , USB flasher
 
 
 **Program:**
+1st program
 
-module upcounter(clk,rst,count);
-input clk,rst;
-output reg[3:0]count;
-always@(posedge clk or negedge rst)
-begin
-if(!rst)
-count <= 4'b0000;
-else
-count <= count+1;
-end
+module funct1(a,b,c,d,f1);
+input a,b,c,d;
+output f1;
+assign f1=((~b & ~d)|(~a & b & d)|(a & b & ~c));
 endmodule
+
+2nd program
+
+module funct2(w,x,y,z,f2);
+input w,x,y,z;
+output f2;
+assign f2=((~y & z)|( w & y )|(x & y));
+endmodule
+
 
 Developed by:samyuktha s
 RegisterNumber:25017544
 
 
+
 **Output:**
-<img width="1920" height="1080" alt="Screenshot (132)" src="https://github.com/user-attachments/assets/4c9cac0e-a4be-483a-93cd-3edb4f02fcbb" />
+1st program  output
+
+<img width="1920" height="1080" alt="Screenshot (134)" src="https://github.com/user-attachments/assets/9daa679f-5a31-4267-86ca-90bf95a09f5a" />
+
+2nd program output
+
+<img width="1920" height="1080" alt="Screenshot (136)" src="https://github.com/user-attachments/assets/49b2c81d-69b6-4640-88db-e1de490fbcc5" />
+
 
 **Timing Diagram**
-<img width="1920" height="1080" alt="Screenshot (131)" src="https://github.com/user-attachments/assets/ac371a61-c7b1-43e7-bac6-1d0b32b08147" />
+1st program diagram
+
+<img width="1920" height="1080" alt="Screenshot (135)" src="https://github.com/user-attachments/assets/83d5cd41-0e18-4b59-a1e6-bb1148eaded6" />
+
+2nd program diagram
+
+<img width="1920" height="1080" alt="Screenshot (137)" src="https://github.com/user-attachments/assets/4e4c72ba-0ce6-4e80-8d8a-35c4916e4731" />
 
 
 **Result:**
